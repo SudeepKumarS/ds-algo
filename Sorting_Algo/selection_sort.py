@@ -27,8 +27,13 @@ def selection_sort(arr: list[int]) -> list[int]:
     # Finally, we have the sorted array
     return arr
 
+import random
 
-print(selection_sort([4, 32, 56, 62, 23, 18, 3, 1, 8]))
+ll = int(input("Please enter array length: "))
+
+l = [random.choice([_ for _ in range(101)]) for _ in range(ll)]
+print(l)
+print(selection_sort(l))
 
 
 
