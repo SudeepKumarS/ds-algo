@@ -4,19 +4,10 @@ of place
 """
 
 
-def rotate_array_to_left(nums: list, k: int) -> int:
+# Rotate the array to the left by 1 time
+def rotate_array_left(nums: list) -> int:
     '''
-    Function to rotate the array by k times left side
-    '''
-    rem = len(nums) - k
-    temp = nums[:rem]
-    nums = nums[rem:] + temp
-    return nums
-
-
-def another_approach(nums: list, k: int = 1) -> int:
-    '''
-    Function to rotate the array to the left by k times
+    Function to rotate the array to the left by 1 time
     '''
     temp = nums[0]
     for i in range(1, len(nums)):
@@ -31,5 +22,4 @@ ll = int(input("Please enter array length: "))
 
 l = [random.choice([_ for _ in range(101)]) for _ in range(ll)]
 print(l)
-print(rotate_array_to_left(l, 3))
-print(another_approach(l))
+print(rotate_array_left(l))
